@@ -1,0 +1,46 @@
+int isLeepYear(int year) { //Ham xet xem nam year co phai nam nhuan hay khong
+
+	if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+		return 1; //Nam nay la nam nhuan
+	return 0; //Khong phai nam nhuan
+	
+}
+
+int checkValidDate(int d, int m, int y) { //Kiem tra ngay d/m/y co hop le khong
+
+	if (d <= 0 || m <= 0 || y <= 0 || d > 31 || m > 12)
+		return 0; //Khong hop le
+	if (d > 30 && ( m == 4 || m == 6 || m == 9 || m == 11))
+		return 0; //Khong hop le
+	if (m == 2)
+		if ((isLeepYear(y) == 0 && d > 28) || d > 29 )
+			return 0;					
+	return 1; //Hop le	
+}
+
+int countDays(int d1, int m1, int d2, int m2, int y) {
+	
+	if (checkValidDate(d1,m1,y) == 0 || checkValidDate(d2,m2,y) == 0) //Ngay thang khong hop le
+		return -1;
+	if (m1 == m2)
+		return d2 - d1;
+	int isLeepYear = isLeepYear(y); //isLeepYear = 1 la nam nhuan, nguoc lai = 0
+	int days = 0;
+	for(int i=m1; i<m2; i++)
+		switch(i) {
+			case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+				days+=31;
+				break;
+			case 2:
+				if (isLeepYear == 1)
+					days+=29;
+				else
+					days+=28;
+				break;
+			default:
+				days += 30;
+		}
+
+	return days - d1 + d2;
+
+}

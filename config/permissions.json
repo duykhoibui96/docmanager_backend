@@ -1,0 +1,67 @@
+[
+    {
+        "Name" : "employee-access"
+    },
+
+    {
+        "Name" : "employee-edit"
+    },
+
+    {
+        "Name" : "employee-customer-edit"
+    },
+
+    {
+        "Name" : "employee-study-edit"
+    },
+
+    {
+        "Name" : "employee-instruct-edit"
+    },
+
+    {
+        "Name" : "customer-access"
+    },
+
+    {
+        "Name" : "customer-edit"
+    },
+
+
+    {
+        "Name" : "customer-employee-edit"
+    },
+
+    {
+        "Name" : "consultancy-access"
+    },
+
+    {
+        "Name" : "consultancy-edit"
+    },
+    
+    {
+        "Name" : "study-access"
+    },
+
+    {
+        "Name" : "study-edit"
+    },
+
+    {
+        "Name" : "study-studyempl-edit"
+    },
+
+    {
+        "Name" : "study-instructor-edit"
+    },
+
+    {
+        "Name" : "seminar-access"
+    },
+
+    {
+        "Name" : "seminar-edit"
+    }
+
+]

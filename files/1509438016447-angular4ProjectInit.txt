@@ -1,0 +1,8 @@
+//Init project
+ng new my-app
+cd my-app
+bower init
+bower install bootstrap#v4.0.0-beta jquery font-awesome --save
+npm install express body-parser mongoose --save
+
+
